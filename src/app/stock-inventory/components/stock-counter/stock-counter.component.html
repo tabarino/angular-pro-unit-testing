@@ -1,10 +1,14 @@
-<div class="stock-counter" [class.focused]="focus">
+<div class="stock-counter">
     <div>
-        <div tabindex="0" (keydown)="onKeyDown($event)" (blur)="onBlur($event)" (focus)="onFocus($event)">
+        <div (keydown)="onKeyUp($event)" (blur)="onBlur($event)" (focus)="onFocus($event)" tabindex="0">
             <p>{{ value }}</p>
-            <div>
-                <button type="button" (click)="increment()" [disabled]="value === max">+</button>
-                <button type="button" (click)="decrement()" [disabled]="value === min">-</button>
+            <div tabindex="-1">
+                <button type="button" tabindex="-1" (click)="increment()" [disabled]="value === max">
+                    +
+                </button>
+                <button type="button" tabindex="-1" (click)="decrement()" [disabled]="value === min">
+                    -
+                </button>
             </div>
         </div>
     </div>
