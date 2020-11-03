@@ -1,13 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DebugElement, NO_ERRORS_SCHEMA } from '@angular/core';
 import { of } from 'rxjs';
 import { StockInventoryComponent } from './stock-inventory.component';
-import { StockBranchComponent } from '../../components/stock-branch/stock-branch.component';
-import { StockCounterComponent } from '../../components/stock-counter/stock-counter.component';
-import { StockProductsComponent } from '../../components/stock-products/stock-products.component';
-import { StockSelectorComponent } from '../../components/stock-selector/stock-selector.component';
 import { StockInventoryService } from '../../services/stock-inventory.service';
-import { DebugElement } from '@angular/core';
 
 class MockStockInventoryService {
     getCartItems() {
@@ -42,11 +38,10 @@ describe('StockInventoryComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             declarations: [
-                StockInventoryComponent,
-                StockBranchComponent,
-                StockCounterComponent,
-                StockProductsComponent,
-                StockSelectorComponent
+                StockInventoryComponent
+            ],
+            schemas: [
+                NO_ERRORS_SCHEMA
             ],
             imports: [
                 ReactiveFormsModule,
