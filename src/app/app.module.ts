@@ -10,6 +10,7 @@ import { StockBranchComponent } from './stock-inventory/components/stock-branch/
 import { StockProductsComponent } from './stock-inventory/components/stock-products/stock-products.component';
 import { StockSelectorComponent } from './stock-inventory/components/stock-selector/stock-selector.component';
 import { StockInventoryComponent } from './stock-inventory/containers/stock-inventory/stock-inventory.component';
+import { CreditCardDirective } from './credit-card/credit-card.directive';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { StockInventoryComponent } from './stock-inventory/containers/stock-inve
         StockBranchComponent,
         StockProductsComponent,
         StockSelectorComponent,
-        StockInventoryComponent
+        StockInventoryComponent,
+        CreditCardDirective
     ],
     imports: [
         BrowserModule,
